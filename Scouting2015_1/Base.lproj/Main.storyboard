@@ -33,10 +33,14 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Team #" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N7n-Ci-7ge">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Team #" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="N7n-Ci-7ge">
                                 <rect key="frame" x="303" y="28" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="didChangeTeamNum:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Y85-kX-YNO"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Team #:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="It2-7a-Rdp">
                                 <rect key="frame" x="234" y="33" width="61" height="21"/>
@@ -44,17 +48,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Scouter:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejg-6E-WvW">
-                                <rect key="frame" x="415" y="33" width="65" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Initials Only" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kiu-Z8-8KZ">
-                                <rect key="frame" x="483" y="29" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
-                            </textField>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="7" translatesAutoresizingMaskIntoConstraints="NO" id="eSx-1a-7mS">
                                 <rect key="frame" x="470" y="339" width="94" height="29"/>
                                 <connections>
@@ -141,16 +134,6 @@
                                     <segment title="Litter"/>
                                 </segments>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CwO-4k-ATH">
-                                <rect key="frame" x="923" y="726" width="85" height="22"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <state key="normal" title="Submit">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="submit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mdJ-ve-tIe"/>
-                                </connections>
-                            </button>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="70" translatesAutoresizingMaskIntoConstraints="NO" id="OfO-tt-1Sl">
                                 <rect key="frame" x="703" y="339" width="94" height="29"/>
                                 <connections>
@@ -180,33 +163,30 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="# of Totes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0i9-sy-yoN">
-                                <rect key="frame" x="36" y="316" width="75" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Totes Moved To AZ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0i9-sy-yoN">
+                                <rect key="frame" x="36" y="316" width="148" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="YIQ-uX-Azp">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="YIQ-uX-Azp">
                                 <rect key="frame" x="36" y="339" width="236" height="29"/>
                                 <segments>
+                                    <segment title="0"/>
                                     <segment title="1"/>
                                     <segment title="2"/>
                                     <segment title="3"/>
                                 </segments>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="RcK-UL-CkL">
-                                <rect key="frame" x="36" y="270" width="236" height="29"/>
+                                <rect key="frame" x="36" y="270" width="123" height="29"/>
                                 <segments>
-                                    <segment title="None"/>
-                                    <segment title="Pushed"/>
-                                    <segment title="Stacked"/>
+                                    <segment title="No"/>
+                                    <segment title="Yes"/>
                                 </segments>
-                                <connections>
-                                    <action selector="didMoveTotes:" destination="BYZ-38-t0r" eventType="valueChanged" id="4jT-MU-vYm"/>
-                                </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cans Moved AZ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqP-D7-buf">
-                                <rect key="frame" x="36" y="386" width="124" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cans Moved To AZ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqP-D7-buf">
+                                <rect key="frame" x="36" y="386" width="146" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -214,7 +194,7 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dl3-YZ-yX4">
                                 <rect key="frame" x="36" y="411" width="236" height="29"/>
                                 <segments>
-                                    <segment title="None"/>
+                                    <segment title="0"/>
                                     <segment title="1"/>
                                     <segment title="2"/>
                                     <segment title="3"/>
@@ -280,8 +260,8 @@
                                     <action selector="didGetCanFromStep:" destination="BYZ-38-t0r" eventType="valueChanged" id="GxU-oT-9AB"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Totes Moved to AZ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MaW-iL-Y8N">
-                                <rect key="frame" x="36" y="241" width="145" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Three Tote Auto Stack" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MaW-iL-Y8N">
+                                <rect key="frame" x="36" y="241" width="170" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -322,6 +302,29 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="X83-UN-OKx">
                                 <rect key="frame" x="259" y="545" width="51" height="31"/>
                             </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Teleop Cans From Step" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iMW-UZ-f4Q">
+                                <rect key="frame" x="703" y="386" width="180" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Sit-Vc-6Ba">
+                                <rect key="frame" x="703" y="415" width="123" height="29"/>
+                                <segments>
+                                    <segment title="No"/>
+                                    <segment title="Yes"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CwO-4k-ATH">
+                                <rect key="frame" x="923" y="726" width="85" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="submit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mdJ-ve-tIe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -333,6 +336,7 @@
                         <outlet property="chkStepCan2" destination="tpI-R5-J0W" id="ute-6A-z50"/>
                         <outlet property="chkStepCan3" destination="Uu7-O1-cwt" id="f4I-WQ-QwV"/>
                         <outlet property="chkStepCan4" destination="X83-UN-OKx" id="5gI-71-ff1"/>
+                        <outlet property="chkSubmit" destination="CwO-4k-ATH" id="OaA-ox-nh7"/>
                         <outlet property="lblCanCaps" destination="6iG-yh-cqD" id="wlH-eu-2IM"/>
                         <outlet property="lblCannedLitter" destination="GxP-57-bWJ" id="FUe-fO-27d"/>
                         <outlet property="lblMatchNum" destination="reZ-OE-nPA" id="kNh-gg-Irf"/>
@@ -341,18 +345,18 @@
                         <outlet property="sgmCansToAZ" destination="dl3-YZ-yX4" id="C9x-KB-EUE"/>
                         <outlet property="sgmDoofus" destination="Dz8-E1-NmG" id="f68-2g-ojf"/>
                         <outlet property="sgmHighCap" destination="rDq-Hv-gH1" id="Ity-su-a0c"/>
-                        <outlet property="sgmMovedTotes" destination="RcK-UL-CkL" id="Gvl-Wv-kHx"/>
                         <outlet property="sgmRobotToAZ" destination="qww-Oy-K3E" id="T7C-X9-HRc"/>
                         <outlet property="sgmSkizzles" destination="bP8-MP-fVm" id="u3i-aw-ztP"/>
                         <outlet property="sgmStartLocation" destination="4Z8-f1-yNk" id="cLA-Jq-Rbz"/>
                         <outlet property="sgmStrategy" destination="VMT-lt-lOm" id="yrM-RC-Gbm"/>
+                        <outlet property="sgmTeleopCansFromStep" destination="Sit-Vc-6Ba" id="lV3-TJ-wf8"/>
+                        <outlet property="sgmThreeToteStack" destination="RcK-UL-CkL" id="HRc-c7-1tw"/>
                         <outlet property="sgmToteStack" destination="QZu-RH-tdu" id="aKl-AQ-Rm9"/>
                         <outlet property="sgmTotesToAZ" destination="YIQ-uX-Azp" id="8Sz-cJ-euL"/>
                         <outlet property="stpCanCaps" destination="eSx-1a-7mS" id="hV4-q6-dk4"/>
                         <outlet property="stpCannedLitter" destination="7qc-dO-FXg" id="ruo-Cx-Mx1"/>
                         <outlet property="stpMatchNum" destination="InQ-3S-v3d" id="DzQ-wN-jfS"/>
                         <outlet property="stpToteScore" destination="OfO-tt-1Sl" id="OV8-Bx-UI8"/>
-                        <outlet property="txtScouter" destination="Kiu-Z8-8KZ" id="l6J-cK-hxG"/>
                         <outlet property="txtTeamNum" destination="N7n-Ci-7ge" id="cwm-NY-uS9"/>
                     </connections>
                 </viewController>
