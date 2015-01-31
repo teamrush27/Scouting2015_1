@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0CE4BC8E1A6AB2FE0078BD4E"
-               BuildableName = "Scouting2015_1.temp_caseinsensitive_rename.app"
+               BuildableName = "Scouting.temp_caseinsensitive_rename.app"
                BlueprintName = "Scouting2015_1"
                ReferencedContainer = "container:Scouting.xcodeproj">
             </BuildableReference>
@@ -57,7 +57,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0CE4BC8E1A6AB2FE0078BD4E"
-            BuildableName = "Scouting2015_1.temp_caseinsensitive_rename.app"
+            BuildableName = "Scouting.temp_caseinsensitive_rename.app"
             BlueprintName = "Scouting2015_1"
             ReferencedContainer = "container:Scouting.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0CE4BC8E1A6AB2FE0078BD4E"
-            BuildableName = "Scouting2015_1.temp_caseinsensitive_rename.app"
+            BuildableName = "Scouting.temp_caseinsensitive_rename.app"
             BlueprintName = "Scouting2015_1"
             ReferencedContainer = "container:Scouting.xcodeproj">
          </BuildableReference>
@@ -94,7 +94,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0CE4BC8E1A6AB2FE0078BD4E"
-            BuildableName = "Scouting2015_1.temp_caseinsensitive_rename.app"
+            BuildableName = "Scouting.temp_caseinsensitive_rename.app"
             BlueprintName = "Scouting2015_1"
             ReferencedContainer = "container:Scouting.xcodeproj">
          </BuildableReference>
