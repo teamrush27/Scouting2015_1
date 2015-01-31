@@ -33,7 +33,7 @@
 
 /* Begin PBXFileReference section */
 		0CCA7F161A707E6A00131B75 /* Backup1-21-15 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Backup1-21-15"; path = "../../../../../Documents/Backup1-21-15"; sourceTree = "<group>"; };
-		0CE4BC8F1A6AB2FE0078BD4E /* Scouting.temp_caseinsensitive_rename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scouting.temp_caseinsensitive_rename.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CE4BC8F1A6AB2FE0078BD4E /* Scouting2015_1.temp_caseinsensitive_rename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scouting2015_1.temp_caseinsensitive_rename.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CE4BC931A6AB2FF0078BD4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CE4BC941A6AB2FF0078BD4E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0CE4BC961A6AB2FF0078BD4E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 		0CE4BC901A6AB2FE0078BD4E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0CE4BC8F1A6AB2FE0078BD4E /* Scouting.temp_caseinsensitive_rename.app */,
+				0CE4BC8F1A6AB2FE0078BD4E /* Scouting2015_1.temp_caseinsensitive_rename.app */,
 				0CE4BCAB1A6AB3000078BD4E /* Scouting2015_1Tests.xctest */,
 			);
 			name = Products;
@@ -151,7 +151,7 @@
 			);
 			name = Scouting2015_1;
 			productName = Scouting2015_1;
-			productReference = 0CE4BC8F1A6AB2FE0078BD4E /* Scouting.temp_caseinsensitive_rename.app */;
+			productReference = 0CE4BC8F1A6AB2FE0078BD4E /* Scouting2015_1.temp_caseinsensitive_rename.app */;
 			productType = "com.apple.product-type.application";
 		};
 		0CE4BCAA1A6AB3000078BD4E /* Scouting2015_1Tests */ = {
@@ -191,7 +191,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0CE4BC8A1A6AB2FE0078BD4E /* Build configuration list for PBXProject "Scouting" */;
+			buildConfigurationList = 0CE4BC8A1A6AB2FE0078BD4E /* Build configuration list for PBXProject "Scouting2015_1" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -370,7 +370,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Scouting2015_1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = Scouting.temp_caseinsensitive_rename;
+				PRODUCT_NAME = Scouting2015_1.temp_caseinsensitive_rename;
 			};
 			name = Debug;
 		};
@@ -382,7 +382,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Scouting2015_1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = Scouting.temp_caseinsensitive_rename;
+				PRODUCT_NAME = Scouting2015_1.temp_caseinsensitive_rename;
 			};
 			name = Release;
 		};
@@ -423,7 +423,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0CE4BC8A1A6AB2FE0078BD4E /* Build configuration list for PBXProject "Scouting" */ = {
+		0CE4BC8A1A6AB2FE0078BD4E /* Build configuration list for PBXProject "Scouting2015_1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0CE4BCB31A6AB3000078BD4E /* Debug */,
