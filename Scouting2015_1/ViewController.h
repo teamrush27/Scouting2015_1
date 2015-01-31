@@ -15,12 +15,17 @@
         - (IBAction)matchChange:(UIStepper *)sender;
         // Notes; Nothing has been added for uploading
 @property (weak, nonatomic) IBOutlet UITextField *txtTeamNum;
-- (IBAction)didChangeTeamNum:(UITextField *)sender;
+
+@property (weak, nonatomic) IBOutlet UITextField *txtScouter;
+
+
+
 
 // Auton
-    @property (weak, nonatomic) IBOutlet UISegmentedControl *sgmThreeToteStack;
+    @property (weak, nonatomic) IBOutlet UISegmentedControl *sgmMovedTotes;
     @property (weak, nonatomic) IBOutlet UISegmentedControl *sgmTotesToAZ;
-               // Above is connected together in code
+        - (IBAction)didMoveTotes:(UISegmentedControl *)sender;
+        // Above is connected together in code
 
         @property (weak, nonatomic) IBOutlet UISegmentedControl *sgmRobotToAZ;
 
@@ -58,10 +63,6 @@
         - (IBAction)canLitterChange:(UIStepper *)sender;
 
         // Above is connected together in code
-
-    @property (weak, nonatomic) IBOutlet UISegmentedControl *sgmTeleopCanFromStep;
-
-
 // MISC
     @property (weak, nonatomic) IBOutlet UISegmentedControl *sgmStartLocation;
     @property (weak, nonatomic) IBOutlet UISegmentedControl *sgmSkizzles;
@@ -71,11 +72,9 @@
     @property (weak, nonatomic) IBOutlet UISegmentedControl *sgmStrategy;
 // Submit Button Area
 
-
-    @property (weak, nonatomic) IBOutlet UIButton *chkSubmit;
-    - (IBAction)submit:(id)sender;
-    - (void) save;
-    - (void) nextMatch;
+- (IBAction)submit:(id)sender;
+- (void) save;
+- (void) nextMatch;
 
 @end
 

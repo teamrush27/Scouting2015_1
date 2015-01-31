@@ -26,7 +26,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 // Above is default stuff dont touch
 
 // Match Number
@@ -36,7 +35,13 @@
 }
 // Auton Totes
 
-    // Cans From Step
+    - (IBAction)didMoveTotes:(UISwitch *)sender {
+        _sgmTotesToAZ.enabled = _sgmMovedTotes.selectedSegmentIndex > 0;
+        if(_sgmMovedTotes.selectedSegmentIndex == 0)
+        {
+            _sgmTotesToAZ.selectedSegmentIndex = -1;
+        }}
+// Cans From Step
     - (IBAction)didGetCanFromStep:(UISegmentedControl *)sender {
 
         if ( _sgmCansFromStep.selectedSegmentIndex == 1) {
@@ -79,117 +84,51 @@
     }
     else {
         _sgmSkizzles.enabled = YES;
-
-    }}
+        _sgmSkizzles.selectedSegmentIndex = 2;
+}}
 // Submit Button Area
-
-- (IBAction)submit:(id)sender
-
+    - (IBAction)submit:(id)sender
 {
     [self save];
     [self nextMatch];
 }
 - (void) save
-{
-    int number = [_stpMatchNum value];
-        NSString *resultLine = [NSString stringWithFormat: @"%i,%i,%@,%i,%i,%@,%@,%@,%i,%i,%i,%i,%@,%i,%i,%@,%@,%i,%@,%@,%@",
-                                [[NSNumber numberWithDouble:_stpMatchNum.value] intValue],
-                                [_txtTeamNum.text intValue],
-                                [_sgmStartLocation titleForSegmentAtIndex:fmax(_sgmStartLocation.selectedSegmentIndex,0)],
-                                [[_sgmRobotToAZ titleForSegmentAtIndex:fmax(_sgmRobotToAZ.selectedSegmentIndex,0)] boolValue]? 1 : 0,
-                                [[_sgmThreeToteStack titleForSegmentAtIndex:fmax(_sgmThreeToteStack.selectedSegmentIndex,0)] boolValue],
-                                [_sgmTotesToAZ titleForSegmentAtIndex:fmax(_sgmTotesToAZ.selectedSegmentIndex,0)],
-                                [_sgmCansToAZ titleForSegmentAtIndex:fmax(_sgmCansToAZ.selectedSegmentIndex,0)],
-                                [_sgmCansFromStep titleForSegmentAtIndex:fmax(_sgmCansFromStep.selectedSegmentIndex,0)],
-                                _chkStepCan1.isOn,
-                                _chkStepCan2.isOn,
-                                _chkStepCan3.isOn,
-                                _chkStepCan4.isOn,
-                                [_sgmToteStack titleForSegmentAtIndex:fmax(_sgmToteStack.selectedSegmentIndex,0)],
-                                [[NSNumber numberWithDouble: _stpToteScore.value] intValue],
-                                [[NSNumber numberWithDouble: _stpCanCaps.value] intValue],
-                                [_sgmHighCap titleForSegmentAtIndex:fmax(_sgmHighCap.selectedSegmentIndex,0)],
-                                [_sgmTeleopCanFromStep titleForSegmentAtIndex:fmax(_sgmTeleopCanFromStep.selectedSegmentIndex,0)],
-                                [[NSNumber numberWithDouble: _stpCannedLitter.value] intValue],
-                                [_sgmDoofus titleForSegmentAtIndex:fmax(_sgmDoofus.selectedSegmentIndex,0)],
-                                [_sgmStrategy titleForSegmentAtIndex:fmax(_sgmStrategy.selectedSegmentIndex,0)],
-                                [_sgmSkizzles titleForSegmentAtIndex:fmax(_sgmSkizzles.selectedSegmentIndex,0)]];
-                                
-                                
-    NSString *docPath= [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)objectAtIndex:0];
-    NSString *fileName=@"";
-    NSString *deviceName = [[UIDevice currentDevice] name];
-                                
-        if(number<10){
-            fileName =[NSString stringWithFormat:@"00%i_%@.csv",
-                       [[NSNumber numberWithDouble:_stpMatchNum.value] intValue], deviceName];
-    }
-        else if(number/10<10){
-            fileName =[NSString stringWithFormat:@"0%i_%@.csv",
-                       [[NSNumber numberWithDouble:_stpMatchNum.value] intValue], deviceName];
-    }
-        else {
-            fileName =[NSString stringWithFormat:@"%i_%@.csv",
-                       [[NSNumber numberWithDouble:_stpMatchNum.value] intValue], deviceName];
-    }
-        NSString *fullFilePath=[docPath stringByAppendingPathComponent:fileName];
-                                 
-        if (![[NSFileManager defaultManager] fileExistsAtPath:docPath]) {
-            [[NSFileManager defaultManager]createFileAtPath:fileName contents:nil attributes:nil];
-    }
-        [resultLine writeToFile:fullFilePath atomically:YES encoding:NSUTF8StringEncoding error: nil];
+{/*
+    NSString *resultLine = [NSString stringWithFormat: @"%i,%i,%@,%@,%@,%i,%i,%@,%@,%@,%@,%@,%i,%i,%i,%i,%i,%@,%@,%i",
+                            _stpMatchNum.value,
+                            _txtTeamNum.text,
+                            _txtScouter.text,
+                            _sgmStartLocation.selectedSegmentIndex,
+                            _sgmMovedTotes.selectedSegmentIndex,
+                            _sgmTotesToAZ.selectedSegmentIndex,
+                            _sgmCansToAZ.selectedSegmentIndex,
+                            _sgmCansFromStep.selectedSegmentIndex,
+                            _chkStepCan1.isOn,
+                            _chkStepCan2.isOn,
+                            _chkStepCan3.isOn,
+                            _chkStepCan4.isOn,
+                            _sgmToteStack.selectedSegmentIndex,
+                            _stpToteScore.value,
+                            _stpCanCaps.value,
+                            _sgmHighCap.selectedSegmentIndex,
+                            _stpCannedLitter.value,
+                            _sgmDoofus.selectedSegmentIndex,
+                            _sgmStrategy.selectedSegmentIndex,
+                            _sgmSkizzles.selectedSegmentIndex,
+                            ];
+    NSString *docPath= [NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory directory, NSSearchPathDomainMask domainMask, YES)objectAtIndex:0];
+    NSString *fileName=[NSString stringWithFormat:@"crap.csv"];
+    if(number<10)
+        fileName =[NSString stringWithFormat:@"00%@.csv",
+                   self->_lblMatchNum.text];
+            */
+
+
+    
 }
 - (void) nextMatch
 {
-// Match & Team  Numbers
-    [_stpMatchNum setValue:_stpMatchNum.value +1];
-    [_txtTeamNum setText:@""];
-// Auton Below
-    [_sgmStartLocation setSelectedSegmentIndex:UISegmentedControlNoSegment];
-    _sgmRobotToAZ.selectedSegmentIndex = 0;
-    _sgmThreeToteStack.selectedSegmentIndex = 0;
-    _sgmTotesToAZ.selectedSegmentIndex = 0;
-    _sgmCansToAZ.selectedSegmentIndex = 0;
-    _sgmCansFromStep.selectedSegmentIndex = 0;
-
-    _chkStepCan1.on = NO;
-    _chkStepCan2.on = NO;
-    _chkStepCan3.on = NO;
-    _chkStepCan4.on = NO;
-// Teleop And Misc Below
-    _sgmStrategy.selectedSegmentIndex = 0;
-    _sgmToteStack.selectedSegmentIndex = 0;
-    _sgmHighCap.selectedSegmentIndex = 0;
-
-    _stpCanCaps.value = 0;
-    _stpToteScore.value = 0;
-    _stpCannedLitter.value = 0;
-
-    _sgmTeleopCanFromStep.selectedSegmentIndex = 0;
-    _sgmSkizzles.selectedSegmentIndex = 2;
-    _sgmDoofus.selectedSegmentIndex = 0;
-// Labels That needed Reseting
-    [self matchChange:_stpMatchNum];
-    [self toteScoreChange:_stpToteScore];
-    [self canCapChange:_stpCanCaps];
-    [self canLitterChange:_stpCannedLitter];
-    [self noShow:_sgmSkizzles];
-
-
-
+    
 
 }
-
-- (IBAction)didChangeTeamNum:(UITextField *)sender {
-    if ([[sender text] length] > 4) {
-        [sender setText:[[sender text] substringToIndex:4]];
-    }
-    if ([_txtTeamNum.text length]!= 0) {
-        [_chkSubmit setEnabled:YES];
-    }
-    else {
-        [_chkSubmit setEnabled:NO];
-    }
-}
-
 @end
