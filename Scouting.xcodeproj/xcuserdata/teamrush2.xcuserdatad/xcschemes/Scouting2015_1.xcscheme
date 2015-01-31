@@ -17,7 +17,7 @@
                BlueprintIdentifier = "0CE4BC8E1A6AB2FE0078BD4E"
                BuildableName = "Scouting2015_1.temp_caseinsensitive_rename.app"
                BlueprintName = "Scouting2015_1"
-               ReferencedContainer = "container:Scouting2015_1.xcodeproj">
+               ReferencedContainer = "container:Scouting.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -31,7 +31,7 @@
                BlueprintIdentifier = "0CE4BCAA1A6AB3000078BD4E"
                BuildableName = "Scouting2015_1Tests.xctest"
                BlueprintName = "Scouting2015_1Tests"
-               ReferencedContainer = "container:Scouting2015_1.xcodeproj">
+               ReferencedContainer = "container:Scouting.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -49,7 +49,7 @@
                BlueprintIdentifier = "0CE4BCAA1A6AB3000078BD4E"
                BuildableName = "Scouting2015_1Tests.xctest"
                BlueprintName = "Scouting2015_1Tests"
-               ReferencedContainer = "container:Scouting2015_1.xcodeproj">
+               ReferencedContainer = "container:Scouting.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -59,7 +59,7 @@
             BlueprintIdentifier = "0CE4BC8E1A6AB2FE0078BD4E"
             BuildableName = "Scouting2015_1.temp_caseinsensitive_rename.app"
             BlueprintName = "Scouting2015_1"
-            ReferencedContainer = "container:Scouting2015_1.xcodeproj">
+            ReferencedContainer = "container:Scouting.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -78,7 +78,7 @@
             BlueprintIdentifier = "0CE4BC8E1A6AB2FE0078BD4E"
             BuildableName = "Scouting2015_1.temp_caseinsensitive_rename.app"
             BlueprintName = "Scouting2015_1"
-            ReferencedContainer = "container:Scouting2015_1.xcodeproj">
+            ReferencedContainer = "container:Scouting.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -96,7 +96,7 @@
             BlueprintIdentifier = "0CE4BC8E1A6AB2FE0078BD4E"
             BuildableName = "Scouting2015_1.temp_caseinsensitive_rename.app"
             BlueprintName = "Scouting2015_1"
-            ReferencedContainer = "container:Scouting2015_1.xcodeproj">
+            ReferencedContainer = "container:Scouting.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
