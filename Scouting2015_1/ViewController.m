@@ -121,9 +121,43 @@
 }
 - (void) nextMatch
 {
-    
+ 
+// Match / Team Num
+[_stpMatchNum setValue:_stpMatchNum.value +1];
+[_txtTeamNum setText:@""];
+  
 
+// Auton Below
+[_sgmStartLocation setSelectedSegmentIndex:UISegmentedControlNoSegment];
+_sgmRobotToAZ.selectedSegmentIndex = 0;
+_sgmThreeToteStack.selectedSegmentIndex = 0;
+_sgmTotesToAZ.selectedSegmentIndex = 0;
+_sgmCansToAZ.selectedSegmentIndex = 0;
+_sgmCansFromStep.selectedSegmentIndex = 0;
+
+_chkStepCan1.on = NO;
+_chkStepCan2.on = NO;
+_chkStepCan3.on = NO;
+_chkStepCan4.on = NO;
+// Teleop And Misc Below
+_sgmStrategy.selectedSegmentIndex = 0;
+_sgmToteStack.selectedSegmentIndex = 0;
+_sgmHighCap.selectedSegmentIndex = 0;
+_stpCanCaps.value = 0;
+_stpToteScore.value = 0;
+_stpCannedLitter.value = 0;
+
+_sgmTeleopCansFromStep.selectedSegmentIndex = 0;
+_sgmSkizzles.selectedSegmentIndex = 2;
+_sgmDoofus.selectedSegmentIndex = 0;
+// Labels That needed Reseting
+[self matchChange:_stpMatchNum];
+[self toteScoreChange:_stpToteScore];
+[self canCapChange:_stpCanCaps];
+[self canLitterChange:_stpCannedLitter];
+[self noShow:_sgmSkizzles];
 }
+
 - (IBAction)didChangeTeamNum:(UITextField *)sender {
     
      if ([[sender text] length] > 4) {
