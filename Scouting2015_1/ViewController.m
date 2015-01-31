@@ -35,13 +35,7 @@
 }
 // Auton Totes
 
-    - (IBAction)didMoveTotes:(UISwitch *)sender {
-        _sgmTotesToAZ.enabled = _sgmMovedTotes.selectedSegmentIndex > 0;
-        if(_sgmMovedTotes.selectedSegmentIndex == 0)
-        {
-            _sgmTotesToAZ.selectedSegmentIndex = -1;
-        }}
-// Cans From Step
+   // Cans From Step
     - (IBAction)didGetCanFromStep:(UISegmentedControl *)sender {
 
         if ( _sgmCansFromStep.selectedSegmentIndex == 1) {
@@ -84,7 +78,6 @@
     }
     else {
         _sgmSkizzles.enabled = YES;
-        _sgmSkizzles.selectedSegmentIndex = 2;
 }}
 // Submit Button Area
     - (IBAction)submit:(id)sender
@@ -129,6 +122,19 @@
 - (void) nextMatch
 {
     
+
+}
+- (IBAction)didChangeTeamNum:(UITextField *)sender {
+    
+     if ([[sender text] length] > 4) {
+        [sender setText:[[sender text] substringToIndex:4]];
+}
+     if ([_txtTeamNum.text length]!= 0) {
+        [_chkSubmit setEnabled:YES];
+}
+     else {
+        [_chkSubmit setEnabled:NO];
+}
 
 }
 @end
