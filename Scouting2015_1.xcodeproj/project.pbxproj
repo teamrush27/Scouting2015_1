@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CCA7F171A707E6A00131B75 /* Backup1-21-15 in Resources */ = {isa = PBXBuildFile; fileRef = 0CCA7F161A707E6A00131B75 /* Backup1-21-15 */; };
 		0CE4BC951A6AB2FF0078BD4E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4BC941A6AB2FF0078BD4E /* main.m */; };
 		0CE4BC981A6AB2FF0078BD4E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4BC971A6AB2FF0078BD4E /* AppDelegate.m */; };
 		0CE4BC9B1A6AB2FF0078BD4E /* Scouting2015_1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4BC991A6AB2FF0078BD4E /* Scouting2015_1.xcdatamodeld */; };
@@ -15,6 +16,9 @@
 		0CE4BCA31A6AB2FF0078BD4E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CE4BCA21A6AB2FF0078BD4E /* Images.xcassets */; };
 		0CE4BCA61A6AB2FF0078BD4E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CE4BCA41A6AB2FF0078BD4E /* LaunchScreen.xib */; };
 		0CE4BCB21A6AB3000078BD4E /* Scouting2015_1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4BCB11A6AB3000078BD4E /* Scouting2015_1Tests.m */; };
+		0CF89A7B1A7421AA00A4EC3C /* AppGraphicFix.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0CF89A7A1A7421AA00A4EC3C /* AppGraphicFix.jpg */; };
+		0CF89A7D1A74274000A4EC3C /* ScoutingLogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0CF89A7C1A74274000A4EC3C /* ScoutingLogo.jpg */; };
+		0CF89A7F1A742B5E00A4EC3C /* ScoutingLogo (1).jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0CF89A7E1A742B5E00A4EC3C /* ScoutingLogo (1).jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0CE4BC8F1A6AB2FE0078BD4E /* Scouting2015_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scouting2015_1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CCA7F161A707E6A00131B75 /* Backup1-21-15 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Backup1-21-15"; path = "../../../../../Documents/Backup1-21-15"; sourceTree = "<group>"; };
+		0CE4BC8F1A6AB2FE0078BD4E /* Scouting2015_1.temp_caseinsensitive_rename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scouting2015_1.temp_caseinsensitive_rename.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CE4BC931A6AB2FF0078BD4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CE4BC941A6AB2FF0078BD4E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0CE4BC961A6AB2FF0078BD4E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -42,6 +47,9 @@
 		0CE4BCAB1A6AB3000078BD4E /* Scouting2015_1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Scouting2015_1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CE4BCB01A6AB3000078BD4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CE4BCB11A6AB3000078BD4E /* Scouting2015_1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Scouting2015_1Tests.m; sourceTree = "<group>"; };
+		0CF89A7A1A7421AA00A4EC3C /* AppGraphicFix.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AppGraphicFix.jpg; sourceTree = "<group>"; };
+		0CF89A7C1A74274000A4EC3C /* ScoutingLogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ScoutingLogo.jpg; sourceTree = "<group>"; };
+		0CF89A7E1A742B5E00A4EC3C /* ScoutingLogo (1).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ScoutingLogo (1).jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +82,7 @@
 		0CE4BC901A6AB2FE0078BD4E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0CE4BC8F1A6AB2FE0078BD4E /* Scouting2015_1.app */,
+				0CE4BC8F1A6AB2FE0078BD4E /* Scouting2015_1.temp_caseinsensitive_rename.app */,
 				0CE4BCAB1A6AB3000078BD4E /* Scouting2015_1Tests.xctest */,
 			);
 			name = Products;
@@ -88,8 +96,11 @@
 				0CE4BC9C1A6AB2FF0078BD4E /* ViewController.h */,
 				0CE4BC9D1A6AB2FF0078BD4E /* ViewController.m */,
 				0CE4BC9F1A6AB2FF0078BD4E /* Main.storyboard */,
+				0CF89A7C1A74274000A4EC3C /* ScoutingLogo.jpg */,
+				0CF89A7A1A7421AA00A4EC3C /* AppGraphicFix.jpg */,
 				0CE4BCA21A6AB2FF0078BD4E /* Images.xcassets */,
 				0CE4BCA41A6AB2FF0078BD4E /* LaunchScreen.xib */,
+				0CF89A7E1A742B5E00A4EC3C /* ScoutingLogo (1).jpg */,
 				0CE4BC991A6AB2FF0078BD4E /* Scouting2015_1.xcdatamodeld */,
 				0CE4BC921A6AB2FF0078BD4E /* Supporting Files */,
 			);
@@ -101,6 +112,7 @@
 			children = (
 				0CE4BC931A6AB2FF0078BD4E /* Info.plist */,
 				0CE4BC941A6AB2FF0078BD4E /* main.m */,
+				0CCA7F161A707E6A00131B75 /* Backup1-21-15 */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -139,7 +151,7 @@
 			);
 			name = Scouting2015_1;
 			productName = Scouting2015_1;
-			productReference = 0CE4BC8F1A6AB2FE0078BD4E /* Scouting2015_1.app */;
+			productReference = 0CE4BC8F1A6AB2FE0078BD4E /* Scouting2015_1.temp_caseinsensitive_rename.app */;
 			productType = "com.apple.product-type.application";
 		};
 		0CE4BCAA1A6AB3000078BD4E /* Scouting2015_1Tests */ = {
@@ -171,6 +183,7 @@
 				TargetAttributes = {
 					0CE4BC8E1A6AB2FE0078BD4E = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = TS5UA22964;
 					};
 					0CE4BCAA1A6AB3000078BD4E = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -205,6 +218,10 @@
 				0CE4BCA11A6AB2FF0078BD4E /* Main.storyboard in Resources */,
 				0CE4BCA61A6AB2FF0078BD4E /* LaunchScreen.xib in Resources */,
 				0CE4BCA31A6AB2FF0078BD4E /* Images.xcassets in Resources */,
+				0CF89A7F1A742B5E00A4EC3C /* ScoutingLogo (1).jpg in Resources */,
+				0CF89A7B1A7421AA00A4EC3C /* AppGraphicFix.jpg in Resources */,
+				0CF89A7D1A74274000A4EC3C /* ScoutingLogo.jpg in Resources */,
+				0CCA7F171A707E6A00131B75 /* Backup1-21-15 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,20 +365,24 @@
 		0CE4BCB61A6AB3000078BD4E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Scouting2015_1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Scouting2015_1.temp_caseinsensitive_rename;
 			};
 			name = Debug;
 		};
 		0CE4BCB71A6AB3000078BD4E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Scouting2015_1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Scouting2015_1.temp_caseinsensitive_rename;
 			};
 			name = Release;
 		};
@@ -418,6 +439,7 @@
 				0CE4BCB71A6AB3000078BD4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0CE4BCB81A6AB3000078BD4E /* Build configuration list for PBXNativeTarget "Scouting2015_1Tests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +448,7 @@
 				0CE4BCBA1A6AB3000078BD4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
