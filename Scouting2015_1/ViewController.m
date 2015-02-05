@@ -115,7 +115,7 @@
  
      NSString *docPath= [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)objectAtIndex:0];
      NSString *fileName=@"";
-     NSString *deviceName = @"R2";     //[[UIDevice currentDevice] name];
+     NSString *deviceName = [[UIDevice currentDevice] name];
      if(number<10){
          fileName =[NSString stringWithFormat:@"00%i_%@.csv",
                    [[NSNumber numberWithDouble:_stpMatchNum.value] intValue], deviceName];
@@ -174,6 +174,7 @@ _sgmDoofus.selectedSegmentIndex = 0;
 [self canCapChange:_stpCanCaps];
 [self canLitterChange:_stpCannedLitter];
 [self noShow:_sgmSkizzles];
+[self didChangeTeamNum:_txtTeamNum];
 }
 
 - (IBAction)didChangeTeamNum:(UITextField *)sender {
