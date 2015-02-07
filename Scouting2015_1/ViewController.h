@@ -18,6 +18,8 @@
 
 - (IBAction)didChangeTeamNum:(UITextField *)sender;
 
+@property (weak, nonatomic) IBOutlet UITextField *txtScouterNum;
+- (IBAction)didChangeScoutNum:(UITextField *)sender;
 
 
 
@@ -80,6 +82,9 @@
 - (IBAction)submit:(id)sender;
 - (void) save;
 - (void) nextMatch;
+- (IBAction)didChangeLocation:(UISegmentedControl *)sender;
+
+
 
 @end
 

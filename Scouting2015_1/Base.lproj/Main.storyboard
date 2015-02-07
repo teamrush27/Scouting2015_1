@@ -58,12 +58,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Highest Tote Stack" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQ5-wA-jz4">
-                                <rect key="frame" x="470" y="352" width="145" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Teleop" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIP-ZH-WT2">
                                 <rect key="frame" x="452" y="75" width="64" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
@@ -109,6 +103,7 @@
                                     <segment title="Zone 2"/>
                                 </segments>
                                 <connections>
+                                    <action selector="didChangeLocation:" destination="BYZ-38-t0r" eventType="valueChanged" id="v4u-cG-rVQ"/>
                                     <action selector="noShow:" destination="BYZ-38-t0r" eventType="valueChanged" id="48t-IZ-ZaS"/>
                                 </connections>
                             </segmentedControl>
@@ -324,6 +319,32 @@
                                     <segment title="5"/>
                                 </segments>
                             </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Highest Tote Stack" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQ5-wA-jz4">
+                                <rect key="frame" x="470" y="350" width="145" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Step" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8W-sO-jrE">
+                                <rect key="frame" x="157" y="550" width="36" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Scouter #:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOy-r0-HNs">
+                                <rect key="frame" x="423" y="33" width="80" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Scouter #" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KKw-vx-X2O">
+                                <rect key="frame" x="513" y="28" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="didChangeScoutNum:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="uVM-nf-RNa"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -356,6 +377,7 @@
                         <outlet property="stpCannedLitter" destination="7qc-dO-FXg" id="ruo-Cx-Mx1"/>
                         <outlet property="stpMatchNum" destination="InQ-3S-v3d" id="DzQ-wN-jfS"/>
                         <outlet property="stpToteScore" destination="OfO-tt-1Sl" id="OV8-Bx-UI8"/>
+                        <outlet property="txtScouterNum" destination="KKw-vx-X2O" id="xZy-8x-NbE"/>
                         <outlet property="txtTeamNum" destination="N7n-Ci-7ge" id="cwm-NY-uS9"/>
                     </connections>
                 </viewController>

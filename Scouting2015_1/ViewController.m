@@ -88,45 +88,46 @@
 - (void) save
 {
    
-
+// Saves the data in order of resultLine based on what we want in the code.
  int number = [_stpMatchNum value];
-     NSString *resultLine = [NSString stringWithFormat: @"%i,%i,%@,%i,%i,%@,%@,%@,%i,%i,%i,%i,%@,%i,%i,%@,%@,%i,%@,%@,%@",
-                            [[NSNumber numberWithDouble:_stpMatchNum.value] intValue],
-                            [_txtTeamNum.text intValue],
-                            [_sgmStartLocation titleForSegmentAtIndex:fmax(_sgmStartLocation.selectedSegmentIndex,0)],
-                            [[_sgmRobotToAZ titleForSegmentAtIndex:fmax(_sgmRobotToAZ.selectedSegmentIndex,0)] boolValue]? 1 : 0,
-                            [[_sgmThreeToteStack titleForSegmentAtIndex:fmax(_sgmThreeToteStack.selectedSegmentIndex,0)]boolValue],
-                            [_sgmTotesToAZ titleForSegmentAtIndex:fmax(_sgmTotesToAZ.selectedSegmentIndex,0)],
-                            [_sgmCansToAZ titleForSegmentAtIndex:fmax(_sgmCansToAZ.selectedSegmentIndex,0)],
-                            [_sgmCansFromStep titleForSegmentAtIndex:fmax(_sgmCansFromStep.selectedSegmentIndex,0)],
-                            _chkStepCan1.isOn,
-                            _chkStepCan2.isOn,
-                            _chkStepCan3.isOn,
-                            _chkStepCan4.isOn,
-                            [_sgmToteStack titleForSegmentAtIndex:fmax(_sgmToteStack.selectedSegmentIndex,0)],
-                            [[NSNumber numberWithDouble: _stpToteScore.value] intValue],
-                            [[NSNumber numberWithDouble: _stpCanCaps.value] intValue],
-                            [_sgmHighCap titleForSegmentAtIndex:fmax(_sgmHighCap.selectedSegmentIndex,0)],
-                            [_sgmTeleopCansFromStep titleForSegmentAtIndex:fmax(_sgmTeleopCansFromStep.selectedSegmentIndex,0)],
-                            [[NSNumber numberWithDouble: _stpCannedLitter.value] intValue],
-                            [_sgmDoofus titleForSegmentAtIndex:fmax(_sgmDoofus.selectedSegmentIndex,0)],
-                            [_sgmStrategy titleForSegmentAtIndex:fmax(_sgmStrategy.selectedSegmentIndex,0)],
-                            [_sgmSkizzles titleForSegmentAtIndex:fmax(_sgmSkizzles.selectedSegmentIndex,0)]];
- 
-     NSString *docPath= [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)objectAtIndex:0];
+    NSString *resultLine = [NSString stringWithFormat: @"%i,%i,%@,%i,%i,%@,%@,%@,%i,%i,%i,%i,%@,%i,%i,%@,%@,%i,%@,%@,%@",
+                     [[NSNumber numberWithDouble:_stpMatchNum.value] intValue],
+                     [_txtTeamNum.text intValue],
+                     [_sgmStartLocation titleForSegmentAtIndex:fmax(_sgmStartLocation.selectedSegmentIndex,0)],
+                     [[_sgmRobotToAZ titleForSegmentAtIndex:fmax(_sgmRobotToAZ.selectedSegmentIndex,0)] boolValue]? 1 : 0,
+                     [[_sgmThreeToteStack titleForSegmentAtIndex:fmax(_sgmThreeToteStack.selectedSegmentIndex,0)]boolValue],
+                     [_sgmTotesToAZ titleForSegmentAtIndex:fmax(_sgmTotesToAZ.selectedSegmentIndex,0)],
+                     [_sgmCansToAZ titleForSegmentAtIndex:fmax(_sgmCansToAZ.selectedSegmentIndex,0)],
+                     [_sgmCansFromStep titleForSegmentAtIndex:fmax(_sgmCansFromStep.selectedSegmentIndex,0)],
+                     _chkStepCan1.isOn,
+                     _chkStepCan2.isOn,
+                     _chkStepCan3.isOn,
+                     _chkStepCan4.isOn,
+                     [_sgmToteStack titleForSegmentAtIndex:fmax(_sgmToteStack.selectedSegmentIndex,0)],
+                     [[NSNumber numberWithDouble: _stpToteScore.value] intValue],
+                     [[NSNumber numberWithDouble: _stpCanCaps.value] intValue],
+                     [_sgmHighCap titleForSegmentAtIndex:fmax(_sgmHighCap.selectedSegmentIndex,0)],
+                     [_sgmTeleopCansFromStep titleForSegmentAtIndex:fmax(_sgmTeleopCansFromStep.selectedSegmentIndex,0)],
+                     [[NSNumber numberWithDouble: _stpCannedLitter.value] intValue],
+                     [_sgmDoofus titleForSegmentAtIndex:fmax(_sgmDoofus.selectedSegmentIndex,0)],
+                     [_sgmStrategy titleForSegmentAtIndex:fmax(_sgmStrategy.selectedSegmentIndex,0)],
+                     [_sgmSkizzles titleForSegmentAtIndex:fmax(_sgmSkizzles.selectedSegmentIndex,0)]];
+
+    // Code for saving, mainly around the CSV part
+    NSString *docPath= [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)objectAtIndex:0];
      NSString *fileName=@"";
      NSString *deviceName = [[UIDevice currentDevice] name];
      if(number<10){
-         fileName =[NSString stringWithFormat:@"00%i_%@.csv",
-                   [[NSNumber numberWithDouble:_stpMatchNum.value] intValue], deviceName];
+         fileName =[NSString stringWithFormat:@"00%i_%@_%@.csv",
+                   [[NSNumber numberWithDouble:_stpMatchNum.value] intValue], deviceName, _txtScouterNum.text];
      }
      else if(number/10<10){
-         fileName =[NSString stringWithFormat:@"0%i_%@.csv",
-                    [[NSNumber numberWithDouble:_stpMatchNum.value] intValue], deviceName];
+         fileName =[NSString stringWithFormat:@"0%i_%@_%@.csv",
+                    [[NSNumber numberWithDouble:_stpMatchNum.value] intValue], deviceName, _txtScouterNum.text];
      }
      else {
-         fileName =[NSString stringWithFormat:@"%i_%@.csv",
-             [[NSNumber numberWithDouble:_stpMatchNum.value] intValue], deviceName];
+         fileName =[NSString stringWithFormat:@"%i_%@_%@.csv",
+             [[NSNumber numberWithDouble:_stpMatchNum.value] intValue], deviceName, _txtScouterNum.text];
      }
      NSString *fullFilePath=[docPath stringByAppendingPathComponent:fileName];
      if (![[NSFileManager defaultManager] fileExistsAtPath:docPath]) {
@@ -137,6 +138,8 @@
 
 
 }
+
+// Clears all fields and labels of the app to default settings. Also incraments match number by 1
 - (void) nextMatch
 {
  
@@ -177,17 +180,28 @@ _sgmDoofus.selectedSegmentIndex = 0;
 [self didChangeTeamNum:_txtTeamNum];
 }
 
+- (IBAction)didChangeLocation:(UISegmentedControl *)sender {
+[self didChangeTeamNum:_txtTeamNum];
+}
+// Limits the length of the text as well enables and disabled the Submit button ( _chkSubmit )
 - (IBAction)didChangeTeamNum:(UITextField *)sender {
     
      if ([[sender text] length] > 4) {
         [sender setText:[[sender text] substringToIndex:4]];
 }
-     if ([_txtTeamNum.text length]!= 0) {
+     if ([_txtTeamNum.text length]!= 0 & _sgmStartLocation.selectedSegmentIndex > -1 & [_txtScouterNum.text length]!= 0) {
         [_chkSubmit setEnabled:YES];
+         
 }
-     else {
-        [_chkSubmit setEnabled:NO];
+    else {
+    [_chkSubmit setEnabled:NO];
 }
 
+
+
+
+}
+- (IBAction)didChangeScoutNum:(UITextField *)sender {
+    [self didChangeTeamNum:_txtTeamNum];
 }
 @end
